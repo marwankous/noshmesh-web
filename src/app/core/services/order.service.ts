@@ -8,11 +8,11 @@ export class OrderService {
   constructor(private http: HttpClient) {}
 
   availableOrders() {
-    return this.http.get<Order[]>(`${environment.apiUrl}/available`);
+    return this.http.get<Order[]>(`${environment.apiUrl}/orders/available`);
   }
 
   myRestaurantOrders() {
-    return this.http.get<Order[]>(`${environment.apiUrl}/mine/restaurant`);
+    return this.http.get<Order[]>(`${environment.apiUrl}/orders/mine/restaurant`);
   }
 
   getOrder(uuid: string) {
